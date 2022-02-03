@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "8cd486da-4821-4c11-99e0-47c532268d15",
+		"name": "TSMS_request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_user_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"india\",\n    \"age\": 25,\n    \"emailId\": \"abc@xyz.com\",\n    \"firstName\": \"onemoreuser\",\n    \"interest\": \"Action,sifi\",\n    \"lastName\": \"newlastname\",\n    \"phoneNumber\": \"UUUUUUUUU\",\n    \"postalCode\": 122112\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSingleUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getUser?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getUser"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getUsers?userId=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getUsers"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":1,\n    \"address\": \"updated_address\",\n    \"age\": 10,\n    \"emailId\": \"update@email.com\",\n    \"firstName\": \"updated_first_name\",\n    \"interest\": \"rom-com\",\n    \"lastName\": \"updated_last_name_1\",\n    \"phoneNumber\": \"XXXXXXXXXX\",\n    \"postalCode\": 123321\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteUser?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteUser"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllSereis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getAllSeries?seriesId=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAllSeries"
+					],
+					"query": [
+						{
+							"key": "seriesId",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSeries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getSeries?seriesId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getSeries"
+					],
+					"query": [
+						{
+							"key": "seriesId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSeries",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteSeries?seriesId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteSeries"
+					],
+					"query": [
+						{
+							"key": "seriesId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSeries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seriesName\": \"Series2\",\n    \"genre\": \"Action\",\n    \"rating\": 4.5,\n    \"casting\": \"abc,def,ghi\",\n    \"agePreference\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addSeries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addSeries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSeason",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seriesId\": 2,\n    \"seasonName\": \"season3\",\n    \"genre\": \"Comedy\",\n    \"rating\": 4.3,\n    \"casting\": \"abc,def,ghi,jkl,mno,pqr\",\n    \"agePreference\": 14\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addSeason",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addSeason"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSeason",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteSeason?seriesId=2&seasonName=season1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteSeason"
+					],
+					"query": [
+						{
+							"key": "seriesId",
+							"value": "2"
+						},
+						{
+							"key": "seasonName",
+							"value": "season1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSeasons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getSeasons?seriesId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getSeasons"
+					],
+					"query": [
+						{
+							"key": "seriesId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEpisode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seasonId\": \"2-season1\",\n    \"episodeName\": \"episode5\",\n    \"duration\": 3600,\n    \"genre\": \"Comedy\",\n    \"rating\": 4,\n    \"casting\": \"abc,def,ghi,jkl,mno,pqr\",\n    \"agePreference\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addEpisode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addEpisode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEpisodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getEpisodes?seasonId=2-season1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getEpisodes"
+					],
+					"query": [
+						{
+							"key": "seasonId",
+							"value": "2-season1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEpisode",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteEpisode?seasonId=2-season1&episodeName=episode3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteEpisode"
+					],
+					"query": [
+						{
+							"key": "seasonId",
+							"value": "2-season1"
+						},
+						{
+							"key": "episodeName",
+							"value": "episode3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateWatchStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 4,\n    \"episodeId\": \"2-season1-episode4\",\n    \"watchedTill\": 3000,\n    \"status\": \"watching\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateWatchStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateWatchStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWatchStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getWatchStatus?userId=3&episodeId=2-season1-episode4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getWatchStatus"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "episodeId",
+							"value": "2-season1-episode4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSpoilerAlert",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getSpoilerAlert?userId1=2&userId2=3&episodeId=2-season1-episode4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getSpoilerAlert"
+					],
+					"query": [
+						{
+							"key": "userId1",
+							"value": "2"
+						},
+						{
+							"key": "userId2",
+							"value": "3"
+						},
+						{
+							"key": "episodeId",
+							"value": "2-season1-episode4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSeriesRating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 2,\n    \"seriesId\": 2,\n    \"rating\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateSeriesRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateSeriesRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSeriesRating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getSeriesRating?userId=2&seriesId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getSeriesRating"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						},
+						{
+							"key": "seriesId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSeasonRating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getSeasonRating?userId=4&seasonId=2-season1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getSeasonRating"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "4"
+						},
+						{
+							"key": "seasonId",
+							"value": "2-season1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSeasonRating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 4,\n    \"seasonId\": \"2-season1\",\n    \"rating\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateSeasonRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateSeasonRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEpisodeRating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 4,\n    \"episodeId\":\"2-season1-episode2\",\n    \"rating\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateEpisodeRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateEpisodeRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEpisodeRating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getEpisodeRating?userId=4&episodeId=2-season1-episode2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getEpisodeRating"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "4"
+						},
+						{
+							"key": "episodeId",
+							"value": "2-season1-episode2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSeriesRecommendation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getSeriesRecommendation?userId=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getSeriesRecommendation"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
